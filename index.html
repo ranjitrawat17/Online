@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- --------------------------------------- FONTS FAMILY --------------------------------- -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tilt+Neon&display=swap" rel="stylesheet">
+    <title>Ranjeet Rawat</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Tilt Neon', cursive;
+            text-decoration: none;
+            color: black;
+
+            /* --------------------- SCROLL BAR HIDE ---------------------- */
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+
+        *::-webkit-scrollbar {
+            display: none;
+        }
+
+        .container {
+            width: 100vw;
+            height: 100vh;
+            background-color: #1a2b3c;
+            overflow-y: scroll;
+            padding: 1rem;
+
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 1rem;
+        }
+
+        .box {
+            background-color: #A3C7D6;
+            width: 100%;
+            height: 200px;
+            border-radius: 10px;
+            padding: 1rem;
+            font-weight: 800;
+            font-size: 24px;
+            display: grid;
+            place-items: center;
+        }
+
+        @media all and (max-width: 900px) {
+            .container {
+                grid-template-columns: repeat(4, 1fr);
+            }
+        }
+
+        @media all and (max-width: 650px) {
+            .container {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media all and (max-width: 350px) {
+            .container {
+                grid-template-columns: repeat(1, 1fr);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <section class="container">
+        <!-- --------------------------   NEWS APP   ---------------------- -->
+        <a href="">
+            <div class="box">News App</div>
+        </a>
+
+        <!-- --------------------------   Tic Tac Toe   ---------------------- -->
+        <a href="">
+            <div class="box">Tic Tac Toe</div>
+        </a>
+    </section>
+</body>
+
+</html>
