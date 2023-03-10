@@ -29,9 +29,25 @@
             display: none;
         }
 
-        .container {
+        .body {
             width: 100vw;
             height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .nav {
+            padding: 1rem;
+            font-size: 30px;
+            background-color: #1c2127;
+            color: whitesmoke;
+            font-weight: 900;
+        }
+
+        .container {
+            flex: 1;
+            width: 100vw;
+            /* height: 100vh; */
             background-color: #1a2b3c;
             overflow-y: scroll;
             padding: 1rem;
@@ -41,16 +57,28 @@
             gap: 1rem;
         }
 
+
+
         .box {
             background-color: #A3C7D6;
             width: 100%;
-            height: 200px;
+            min-height: 200px;
             border-radius: 10px;
             padding: 1rem;
             font-weight: 800;
             font-size: 24px;
-            display: grid;
-            place-items: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: .5rem;
+        }
+
+        .box p {
+            font-size: 16px;
+            font-weight: 500;
+            text-align: center;
+            color: #1a2b3c;
         }
 
         @media all and (max-width: 900px) {
@@ -60,6 +88,12 @@
         }
 
         @media all and (max-width: 650px) {
+            .container {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        @media all and (max-width: 450px) {
             .container {
                 grid-template-columns: repeat(2, 1fr);
             }
@@ -74,16 +108,26 @@
 </head>
 
 <body>
-    <section class="container">
-        <!-- --------------------------   NEWS APP   ---------------------- -->
-        <a href="">
-            <div class="box">News App</div>
-        </a>
+    <section class="body">
+        <!-- --------------------------   NAVIGATION   ---------------------- -->
+        <nav class="nav">
+            My Websites
+        </nav>
+        <div class="container">
+            <!-- --------------------------   NEWS APP   ---------------------- -->
+            <a href="">
+                <div class="box">News App
+                    <p>React, API, Dark Theme, Search, Infinite Scroll</p>
+                </div>
+            </a>
 
-        <!-- --------------------------   Tic Tac Toe   ---------------------- -->
-        <a href="">
-            <div class="box">Tic Tac Toe</div>
-        </a>
+            <!-- --------------------------   Tic Tac Toe   ---------------------- -->
+            <a href="">
+                <div class="box">Tic Tac Toe
+                    <p>React, Dark Theme</p>
+                </div>
+            </a>
+        </div>
     </section>
 </body>
 
